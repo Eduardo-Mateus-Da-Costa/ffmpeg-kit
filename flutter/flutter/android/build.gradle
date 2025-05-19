@@ -2,6 +2,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
     }
 
     dependencies {
@@ -13,6 +16,9 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
 
@@ -49,5 +55,8 @@ android {
 
 dependencies {
     implementation 'androidx.annotation:annotation:1.5.0'
-    implementation 'com.arthenica:ffmpeg-kit-https:6.0-2'
+    implementation(name: 'ffmpeg-kit-gpl-gnutls-r22b-armv8a-x86-64-nostreamsupport', ext: 'aar')
+//    Use the following line to include the Flutter engine in your project
+//        comment after use
+//    implementation files("F:/tools/flutter/bin/cache/artifacts/engine/android-arm64-release/flutter.jar")
 }
